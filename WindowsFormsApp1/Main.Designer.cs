@@ -72,13 +72,14 @@
             this.label4 = new System.Windows.Forms.Label();
             this.PreviewBtn = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.NewButton = new System.Windows.Forms.Button();
             this.SaveAsButton = new System.Windows.Forms.Button();
             this.SaveButton = new System.Windows.Forms.Button();
             this.HTMLBtn = new System.Windows.Forms.Button();
             this.Reset_Btn = new System.Windows.Forms.Button();
             this.sampleBtn = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.pageSetupDialog1 = new System.Windows.Forms.PageSetupDialog();
+            this.NewButton = new System.Windows.Forms.Button();
             oepn_Btn = new System.Windows.Forms.Button();
             this.PartsBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
@@ -523,20 +524,6 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // NewButton
-            // 
-            this.NewButton.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.New;
-            this.NewButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.NewButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.NewButton.Font = new System.Drawing.Font("ＭＳ ゴシック", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.NewButton.ForeColor = System.Drawing.Color.White;
-            this.NewButton.Location = new System.Drawing.Point(12, 32);
-            this.NewButton.Name = "NewButton";
-            this.NewButton.Size = new System.Drawing.Size(116, 67);
-            this.NewButton.TabIndex = 11;
-            this.NewButton.UseVisualStyleBackColor = true;
-            this.NewButton.Click += new System.EventHandler(this.NewButton_Click);
-            // 
             // SaveAsButton
             // 
             this.SaveAsButton.BackgroundImage = global::WindowsFormsApp1.Properties.Resources.SaveAs;
@@ -609,6 +596,7 @@
             this.sampleBtn.TabIndex = 27;
             this.sampleBtn.Text = "sample";
             this.sampleBtn.UseVisualStyleBackColor = true;
+            this.sampleBtn.Click += new System.EventHandler(this.sampleBtn_Click);
             // 
             // button2
             // 
@@ -626,6 +614,22 @@
             this.button2.TabIndex = 28;
             this.button2.Text = "sample";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // NewButton
+            // 
+            this.NewButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(92)))), ((int)(((byte)(79)))));
+            this.NewButton.FlatAppearance.BorderSize = 2;
+            this.NewButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.NewButton.Font = new System.Drawing.Font("UD デジタル 教科書体 NK-B", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.NewButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(92)))), ((int)(((byte)(79)))));
+            this.NewButton.Location = new System.Drawing.Point(14, 32);
+            this.NewButton.Name = "NewButton";
+            this.NewButton.Size = new System.Drawing.Size(114, 67);
+            this.NewButton.TabIndex = 29;
+            this.NewButton.Text = "新規作成";
+            this.NewButton.UseVisualStyleBackColor = true;
+            this.NewButton.Click += new System.EventHandler(this.NewButton_Click_1);
             // 
             // main
             // 
@@ -633,6 +637,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1302, 918);
+            this.Controls.Add(this.NewButton);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.sampleBtn);
             this.Controls.Add(this.label4);
@@ -641,7 +646,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button_edit);
             this.Controls.Add(oepn_Btn);
-            this.Controls.Add(this.NewButton);
             this.Controls.Add(this.SaveAsButton);
             this.Controls.Add(this.SaveButton);
             this.Controls.Add(this.PartsBox);
@@ -678,7 +682,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button Reset_Btn;
         private System.Windows.Forms.GroupBox PartsBox;
-        private System.Windows.Forms.Button NewButton;
         private System.Windows.Forms.ImageList imageList;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.WebBrowser webBrowser1;
@@ -722,6 +725,8 @@
         private System.Windows.Forms.Button PreviewBtn;
         private System.Windows.Forms.Button sampleBtn;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.PageSetupDialog pageSetupDialog1;
+        private System.Windows.Forms.Button NewButton;
     }
 }
 

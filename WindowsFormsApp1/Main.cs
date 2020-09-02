@@ -13,6 +13,8 @@ namespace WindowsFormsApp1
 {
     public partial class main : Form
     {
+
+
         //定義--------------------------------------------------------
         const string ApplicationName = "かんたんWeb君(Ver.1)";//アプリケーション名
         private string FileName = ""; //ファイル名(フルパス)
@@ -70,6 +72,12 @@ namespace WindowsFormsApp1
          */
         private void Form1_Load(object sender, EventArgs e)
         {
+            Form nbc = new Form();
+            NewButton_Click(sender,e);
+            MenuItemFileNew_Click(sender, e);
+            //this.NewButton.PerformClick();
+            // this.sampleBtn.PerformClick();
+
             ListViewItem lvi = new ListViewItem();
             
             lvi.Text = "見出し";
@@ -178,8 +186,8 @@ namespace WindowsFormsApp1
                 text_box[cnt] = input;
                 writer = new System.IO.StreamWriter(destinationPath, false, System.Text.Encoding.UTF8);
                 writer.Write("<DOCTYPE! HTML>\r\n");
-                writer.Write("<HTML>\r\n"); //HTML開始
-                writer.Write("<head>\r\n" + "<title>" + Title.Text + "</title>\r\n</head>\r\n"); //タイトルの定義
+                writer.Write("<HTML lang=\"ja\">\r\n"); //HTML開始
+                writer.Write("<head>\r\n" + "<meta charset=\"uft-8\">\r\n" + "<title>" + Title.Text + "</title>\r\n</head>\r\n"); //タイトルの定義
                 writer.Write("<body>\r\n");
                 for (int i = 0; i <= cnt; i++)
                 {
@@ -473,11 +481,15 @@ namespace WindowsFormsApp1
         /*
          *新規追加(かわが)
          */
+
+        
         private void NewButton_Click(object sender, EventArgs e)
         {
             MenuItemFileNew_Click(sender, e);
+            //MessageBox.Show("shinnkisakusei");
+            
         }
-
+       
 
         /*
          * HTMLソースコードを表示する(かわが)
@@ -549,7 +561,8 @@ namespace WindowsFormsApp1
 
             //＊　新規追加案
             CSS_Parts cssp = new CSS_Parts(); //CSS参照
-            TextBox_Parts tboxp = new TextBox_Parts();
+            TextBox_Parts tboxp = new TextBox_Parts(); // テキストボックス
+            Button_Parts btnp = new Button_Parts(); // ボタン<button>
 
             //部品選択分岐-----------------------------------------------
             if (sel == "1") //テキスト
@@ -625,6 +638,13 @@ namespace WindowsFormsApp1
             if (sel == "10") //テキストボックス
             {
                 result = tboxp.ShowMiniForm();
+                writer_html(result, 0);
+                cnt++; //次の行へ
+            }
+
+            if (sel == "11") //ボタン
+            {
+                result = btnp.ShowMiniForm();
                 writer_html(result, 0);
                 cnt++; //次の行へ
             }
@@ -1027,9 +1047,25 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        //sample
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //this.sampleBtn.PerformClick();
+            webBrowser1.GoBack();
+        }
+
+        private void sampleBtn_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("sampleが押された", "テスト");
+        }
+
+        private void NewButton_Click_1(object sender, EventArgs e)
+        {
+            MenuItemFileNew_Click(sender, e);
+        }
+
         //在間くん作成プログラム統合部分-----------------------------------------------
-
-
 
 
     }

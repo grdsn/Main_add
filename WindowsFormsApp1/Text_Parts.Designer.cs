@@ -20,13 +20,13 @@
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
+            #region Windows Form Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
-        private void InitializeComponent()
+            /// <summary>
+            /// Required method for Designer support - do not modify
+            /// the contents of this method with the code editor.
+            /// </summary>
+            private void InitializeComponent()
         {
             this.parts_name = new System.Windows.Forms.Label();
             this.info_label = new System.Windows.Forms.Label();
@@ -65,6 +65,7 @@
             // 
             // TextAdd
             // 
+            this.TextAdd.Cursor = System.Windows.Forms.Cursors.WaitCursor;
             this.TextAdd.Location = new System.Drawing.Point(2, 55);
             this.TextAdd.Multiline = true;
             this.TextAdd.Name = "TextAdd";
@@ -74,7 +75,7 @@
             this.TextAdd.UseWaitCursor = true;
             this.TextAdd.TextChanged += new System.EventHandler(this.Main_box_TextChanged);
             // 
-            // Create_parts
+            // Text_parts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -83,7 +84,7 @@
             this.Controls.Add(this.AddConfirm);
             this.Controls.Add(this.info_label);
             this.Controls.Add(this.parts_name);
-            this.Name = "Create_parts";
+            this.Name = "Text_parts";
             this.Text = "Create_parts";
             this.Load += new System.EventHandler(this.Create_parts_Load);
             this.ResumeLayout(false);
@@ -97,5 +98,6 @@
         private System.Windows.Forms.Label info_label;
         private System.Windows.Forms.Button AddConfirm;
         private System.Windows.Forms.TextBox TextAdd;
+
     }
 }

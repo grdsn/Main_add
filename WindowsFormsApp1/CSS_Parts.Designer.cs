@@ -39,7 +39,7 @@
             this.AddConfirm.Location = new System.Drawing.Point(380, 12);
             this.AddConfirm.Name = "AddConfirm";
             this.AddConfirm.Size = new System.Drawing.Size(101, 43);
-            this.AddConfirm.TabIndex = 0;
+            this.AddConfirm.TabIndex = 4;
             this.AddConfirm.Text = "追加";
             this.AddConfirm.UseVisualStyleBackColor = true;
             this.AddConfirm.Click += new System.EventHandler(this.AddConfirm_Click);
@@ -67,6 +67,7 @@
             // 
             // cssFile
             // 
+            this.cssFile.Enabled = false;
             this.cssFile.Font = new System.Drawing.Font("MS UI Gothic", 15.75F);
             this.cssFile.Location = new System.Drawing.Point(12, 125);
             this.cssFile.Name = "cssFile";
@@ -82,6 +83,10 @@
             this.Controls.Add(this.choiseCSS);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.AddConfirm);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(509, 219);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(509, 219);
             this.Name = "CSS_Parts";
             this.Text = "CSS_Parts";
             this.ResumeLayout(false);

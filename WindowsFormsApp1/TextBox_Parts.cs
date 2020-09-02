@@ -24,10 +24,14 @@ namespace WindowsFormsApp1
         {
             TextBox_Parts f = new TextBox_Parts();
             f.ShowDialog();
-            string receiveText = "<input type=\"text\" name=\"\" value=\"" + value.Text + "\">";　//HTML文
+            string receiveText = "<input type=\"text\" value=\"" + f.value.Text + "\" size=\"" + f.size.Value + "\">";　//HTML文
             f.Dispose();
             return receiveText; //HTML文を返す
+        }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Close(); //画面を閉じ内容を反映
         }
     }
 }

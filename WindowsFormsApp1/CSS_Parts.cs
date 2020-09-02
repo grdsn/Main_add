@@ -16,7 +16,7 @@ namespace WindowsFormsApp1
         //OpenFileDialogクラスのインスタンスを作成
         OpenFileDialog ofd = new OpenFileDialog();
         // htmlを生成するかどうか
-        Boolean returnFrg = false;
+        //Boolean returnFrg = false;
 
         public static string text_return;
         public CSS_Parts()
@@ -30,8 +30,8 @@ namespace WindowsFormsApp1
 
         private void choiseCSS_Click(object sender, EventArgs e)
         {
-            //ofd.InitialDirectory = System.Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-            ofd.Filter = "All Files|*.css";
+            //ファイルの選択
+            ofd.Filter = "すべてのファイル(*.*)|*.css";
             ofd.FilterIndex = 2;
             ofd.Title = "開くファイルを選択してください";
             ofd.RestoreDirectory = true;
@@ -61,7 +61,7 @@ namespace WindowsFormsApp1
             else
             {
             */
-                f.Dispose();
+            f.Dispose();
             string receiveText = "<link rel=\"styesheet\" href=\"" + f.cssFile.Text + "\">";
             return receiveText;
             //return "";
